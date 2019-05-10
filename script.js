@@ -1,13 +1,16 @@
 function Animal() { }   
 
 Animal.prototype = {
+    myName: "blippy",
     constructor: Animal,
     activity: "eating",
     dermis: "coloured",
-    limbs: 4
+    limbs: 4,
+    reportActivity: function() {
+        console.log ("This animal is currently " + this.activity + ".");
+    }
 };
 
 let cow = new Animal ();
 
-console.log(cow.dermis);
-console.log(cow.limbs);
+cow.reportActivity();

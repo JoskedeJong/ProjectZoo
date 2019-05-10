@@ -7,6 +7,6 @@ The goal and scope of this project is very much open to change.
 #### Objectives:
 1. [x] Create a prototype 'Animal'.
 2. [x] Create an instance of 'Animal'.
-2. [ ] Create a function for 'Animal' that lets the instance declare what it is doing.
+2. [x] Create a function for 'Animal' that lets the instance declare what it is doing.
 3. [ ] Create a prototype 'Monkey' that inherits traits from 'Animal'.
 4. [ ] Create an instance of Monkey that demonstrably has properties from both 'Monkey' and  'Animal'.
