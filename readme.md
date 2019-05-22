@@ -5,8 +5,13 @@ These objects should have certain characteristics and functions that are inherit
 The goal and scope of this project is very much open to change.
 
 #### Objectives:
-1. [x] Create a prototype 'Animal'.
-2. [x] Create an instance of 'Animal'.
-2. [x] Create a function for 'Animal' that lets the instance declare what it is doing.
-3. [ ] Create a prototype 'Monkey' that inherits traits from 'Animal'.
-4. [ ] Create an instance of Monkey that demonstrably has properties from both 'Monkey' and  'Animal'.
+* [x] Create a prototype 'Animal'.
+* [x] Create an instance of 'Animal'.
+* [x] Create a function for 'Animal' that lets the instance declare what it is doing.
+* [x] Create a prototype 'Monkey' that inherits traits from 'Animal'.
+* [x] Create an instance of Monkey that demonstrably has properties from both 'Monkey' and  'Animal'.
+* [ ] Add function that:
+* * [ ] allows you to feed the monkey
+* * [ ] counts how much the mokey has been fed
+* * [ ] responds if the monkey has been fed enough
+

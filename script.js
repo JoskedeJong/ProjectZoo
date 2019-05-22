@@ -9,8 +9,10 @@ Animal.prototype = {
     reportActivity: function() {
         console.log ("This animal is currently " + this.activity + ".");
     }
-};
+};  
 
-let cow = new Animal ();
+function Monkey() {}
+Monkey.prototype = Object.create (Animal.prototype);
 
-cow.reportActivity();
+let Guppy = new Monkey;
+Guppy.reportActivity();
