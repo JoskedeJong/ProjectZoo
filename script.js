@@ -1,9 +1,10 @@
 function Animal() { }   
+var fedCounter = 1
 
 Animal.prototype = {
     myName: "blippy",
     constructor: Animal,
-    activity: "eating",
+    activity: "active",
     dermis: "coloured",
     limbs: 4,
     reportActivity: function() {
@@ -13,6 +14,14 @@ Animal.prototype = {
 
 function Monkey() {}
 Monkey.prototype = Object.create (Animal.prototype);
+Monkey.prototype.constructor = Monkey;                          // corrects prototype to properly set contructor relation after creation.
+Monkey.prototype.feed = function() {
+    console.log("This animal has been fed "+fedCounter+" times.");
+    fedCounter++;
+}
 
 let Guppy = new Monkey;
 Guppy.reportActivity();
+Guppy.feed();
+Guppy.feed();
+Guppy.feed();
