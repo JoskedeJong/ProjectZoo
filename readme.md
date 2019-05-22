@@ -10,8 +10,9 @@ The goal and scope of this project is very much open to change.
 * [x] Create a function for 'Animal' that lets the instance declare what it is doing.
 * [x] Create a prototype 'Monkey' that inherits traits from 'Animal'.
 * [x] Create an instance of Monkey that demonstrably has properties from both 'Monkey' and  'Animal'.
-* [x] Add function that:
+* [x] Add function that will:
 * * [x] allows you to feed the monkey
 * * [x] counts how much the mokey has been fed
 * * [ ] responds if the monkey has been fed enough
-
+* [x] add button that feeds the monkey
+* [ ] add function that returns the monkey's name

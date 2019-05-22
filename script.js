@@ -22,6 +22,3 @@ Monkey.prototype.feed = function() {
 
 let Guppy = new Monkey;
 Guppy.reportActivity();
-Guppy.feed();
-Guppy.feed();
-Guppy.feed();
