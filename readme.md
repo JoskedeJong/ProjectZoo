@@ -15,4 +15,4 @@ The goal and scope of this project is very much open to change.
 * * [x] counts how much the mokey has been fed
 * * [ ] responds if the monkey has been fed enough
 * [x] add button that feeds the monkey
-* [ ] add function that returns the monkey's name
+* [x] add function that returns the monkey's name

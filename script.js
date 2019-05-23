@@ -1,5 +1,5 @@
 function Animal() { }   
-var fedCounter = 1
+var fedCounter = 1;
 
 Animal.prototype = {
     myName: "blippy",
@@ -21,4 +21,14 @@ Monkey.prototype.feed = function() {
 }
 
 let Guppy = new Monkey;
+Guppy.myName="Guppy";
 Guppy.reportActivity();
+
+let giveNameMixin = function(obj){
+    obj.giveName = function(){
+        console.log("This is "+obj.myName);
+    }
+};
+
+giveNameMixin(Guppy);
+Guppy.giveName();
