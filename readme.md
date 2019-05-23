@@ -17,4 +17,6 @@ The goal and scope of this project is very much open to change.
 * [x] add button that feeds the monkey
 * [x] add function that returns the monkey's name
 * [x] make the feed function report the name of the animal being fed 
-* [ ] make Howler monkey shout on every third time being fed without changing the feed-function
+* [ ] make feed counter track for each separate animal being fed
+* [x] make Howler monkey shout on every third time being fed without changing the feed-function
+* * Not satisfied with the shout-on-feed-function yet
