@@ -20,3 +20,5 @@ The goal and scope of this project is very much open to change.
 * [ ] make feed counter track for each separate animal being fed
 * [x] make Howler monkey shout on every third time being fed without changing the feed-function
 * * Not satisfied with the shout-on-feed-function yet
+* [ ] make visitors shout 'eeep!' when howlers howl
+* [ ] add functionality to count species and subspecies
