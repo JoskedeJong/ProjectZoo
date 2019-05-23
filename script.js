@@ -6,6 +6,7 @@ Animal.prototype = {
     myName: "unnamed animal",
     activity: "active",
     limbs: 4,
+    fedCounter: 0,
     reportActivity: function() {
         console.log ("This animal is currently " + this.activity + ".");
     }
@@ -133,6 +134,12 @@ function countAnimals(){
         ["Total Humans", humanCount+caretakerCount+visitorCount], ["Caretakers", caretakerCount], ["Visitors", visitorCount])
 }
 
+// ---------------------------------------------------------------------- to HTML
+function setList(){
+    // var x = toString(countedList);
+    document.getElementsByClassName("listSpace")[0].innerHTML = countedList;
+}
+
 // ---------------------------------------------------------------------- calls
 
 giveNameMixin(monkey1);
@@ -141,6 +148,6 @@ monkey1.reportActivity();
 
 // console.log(monkey1);
     
-// console.log(animalsList);
+console.log(animalsList);
 countAnimals();
 console.log(countedList);
