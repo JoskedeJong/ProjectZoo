@@ -2,7 +2,6 @@ function Animal() { }
 var fedCounter = 1;
 
 Animal.prototype = {
-    myName: "blippy",
     constructor: Animal,
     activity: "active",
     dermis: "coloured",
@@ -16,13 +15,18 @@ function Monkey() {}
 Monkey.prototype = Object.create (Animal.prototype);
 Monkey.prototype.constructor = Monkey;                          // corrects prototype to properly set contructor relation after creation.
 Monkey.prototype.feed = function() {
-    console.log("This animal has been fed "+fedCounter+" times.");
+    console.log(this.myName+" has been fed "+fedCounter+" times.");
     fedCounter++;
 }
 
-let Guppy = new Monkey;
-Guppy.myName="Guppy";
-Guppy.reportActivity();
+function Howler(){}
+Howler.prototype = Object.create(Monkey.prototype);
+Howler.prototype.constructor = Howler;
+// Howler.prototype.shout = (function(){
+//     if(fedCounter % 3 === 0){
+//         console.log("Oooooop!");
+//     })();
+// }
 
 let giveNameMixin = function(obj){
     obj.giveName = function(){
@@ -30,5 +34,13 @@ let giveNameMixin = function(obj){
     }
 };
 
-giveNameMixin(Guppy);
-Guppy.giveName();
+
+let monkey1 = new Howler;
+monkey1.myName="Guppy";
+
+giveNameMixin(monkey1);
+monkey1.giveName();
+monkey1.reportActivity();
+// monkey1.shout();
+console.log(monkey1.dermis);
+    
