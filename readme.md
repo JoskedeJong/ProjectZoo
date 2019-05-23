@@ -21,4 +21,5 @@ The goal and scope of this project is very much open to change.
 * [x] make Howler monkey shout on every third time being fed without changing the feed-function
 * * Not satisfied with the shout-on-feed-function yet
 * [ ] make visitors shout 'eeep!' when howlers howl
-* [ ] add functionality to count species and subspecies
+* [x] add functionality to count species and subspecies
+* * I wonder if I can create an inherited function that lets an instance push its info into the animalCount array as soon as its generated

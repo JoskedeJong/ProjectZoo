@@ -23,9 +23,9 @@ Monkey.prototype.feed = function() {
 function Howler(){}                                                    
 Howler.prototype = Object.create(Monkey.prototype);
 Howler.prototype.constructor = Howler;
-Howler.prototype.feed = function(){
-    console.log(this.myName+" has been fed "+fedCounter+" times.");    // personal note: ugh, I wanted to extend, not override
+Howler.prototype.feed = function(){                                    // personal note: ugh, I wanted to extend, not override
     fedCounter++;
+    console.log(this.myName+" has been fed "+fedCounter+" times.");    
     if(fedCounter % 3 === 0){
         console.log("Oooooop!");
     }
@@ -99,11 +99,48 @@ let human5 = new Visitor;
 human5.myName="Little Jenny";
 this.animalsList.push(human5);
 
+// ---------------------------------------------------------------------- counting the animals
+var countedList = [];
+
+function countAnimals(){
+    let monkeyCount = 0;
+    let howlerCount = 0;
+    let vervetCount = 0;
+    let humanCount = 0;
+    let caretakerCount = 0;
+    let visitorCount = 0;
+    this.animalsList.forEach(function (element, index){
+        if (element.constructor.name === "Monkey"){
+            monkeyCount+=1;
+        }
+        else if (element.constructor.name === "Howler"){
+            howlerCount++;
+        }
+        else if (element.constructor.name === "Vervet"){
+            vervetCount++;
+        }
+        else if (element.constructor.name === "Human"){
+            humanCount++;
+        }
+        else if (element.constructor.name === "Caretaker"){
+            caretakerCount++;
+        }
+        else if (element.constructor.name === "Visitor"){
+            visitorCount++;
+        }
+    });
+    this.countedList.push(["Total Monkeys", monkeyCount+howlerCount+vervetCount], ["Howlers", howlerCount], ["Vervets", vervetCount ], 
+        ["Total Humans", humanCount+caretakerCount+visitorCount], ["Caretakers", caretakerCount], ["Visitors", visitorCount])
+}
+
 // ---------------------------------------------------------------------- calls
+
 giveNameMixin(monkey1);
 monkey1.giveName();
 monkey1.reportActivity();
 
-console.log(monkey1);
+// console.log(monkey1);
     
-console.log(animalsList);
+// console.log(animalsList);
+countAnimals();
+console.log(countedList);
